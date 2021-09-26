@@ -3,17 +3,17 @@ This repository contains the cheat sheet for the Day 1 session of Git-Learning V
 
 
 # What is version control?
-	- Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
+- Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time.
 	
-	- Software teams that do not use any form of version control often run into problems like not knowing which changes that have been made are available to users.
+- Software teams that do not use any form of version control often run into problems like not knowing which changes that have been made are available to users.
 
 ## Benefits of using Version Control Systems
 
-	- A complete long-term change history of every file.This means every change made by many individuals over the years. They also include the author, date and written notes on the purpose of each change.
+- A complete long-term change history of every file.This means every change made by many individuals over the years. They also include the author, date and written notes on the purpose of each change.
 	
-	- Branching and merging. Having team members work concurrently is a no-brainer, but even individuals working on their own can benefit from the ability to work on independent streams of changes.
+- Branching and merging. Having team members work concurrently is a no-brainer, but even individuals working on their own can benefit from the ability to work on independent streams of changes.
 	
-	- And many other different features!
+- And many other different features!
 
 # Installation
 
@@ -41,7 +41,25 @@ A macOS Git installer is maintained and available for download at the Git websit
 
 # Seting up the git terminal
 
-*You can add tokens to your git terminal two ways:*
+## Setting up your git config. 
+
+The git config command changes the configuration options in your Git installation. It is often used to set your Git email, editor, and any aliases you want to use with the git command.
+
+- *Setting up username*
+
+`git config --global user.name "username"`
+
+- *Seting up Email*
+
+`git config --global user.email "name@email.com"`
+
+- *View your configuration file*
+
+`git config --list`
+
+
+
+## Adding tokens 
 
 **A. By Adding SSH Tokens**
 
@@ -197,6 +215,17 @@ Push:
 
 Force-Push:
 `git push origin master --force
+
+
+### Setting up aliases
+
+They allow you to write shortcuts for common commands that you write.
+
+Example: 
+
+`git config --global alias.co commit`
+
+Every time we run git co, the git commit command will be run!
 
 
 ## Terminal Commands
