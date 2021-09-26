@@ -21,7 +21,7 @@ This repository contains the cheat sheet for the Day 1 session of Git-Learning V
 
 Just go to https://git-scm.com/download/win and the download will start automatically. Apply the steps described in the session to install.
 
-## Install Git on Linux:
+## Install Git on Linux
 **For Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS)** 
 
 `sudo dnf install git-all`
@@ -34,17 +34,18 @@ Just go to https://git-scm.com/download/win and the download will start automati
 
 *For other options, there are instructions for installing on several different Unix distributions on the Git website, at https://git-scm.com/download/linux.*
 
-## Install on Mac
+## Install Git on Mac
 
 A macOS Git installer is maintained and available for download at the Git website, at https://git-scm.com/download/mac. Follow the steps mentioned ont the website after that.
 
 
 # Seting up the git terminal
 
-GitHub offers a convenient SSH key feature for accessing your repositories on the command line. Instead of using usernames and passwords every time you push to or pull from your repository, you can use your key. In this article we’ll learn how to add SSH keys to your GitHub account.
+*You can add tokens to your git terminal two ways:*
 
-**REMEMBER** From August 13, 2021, GitHub is no longer accepting account passwords when authenticating Git operations. So this step is no longer optional but compulsory as this is the only way to perform `push`, `merge` or other crucial commands from the user terminal.
+**A. By Adding SSH Tokens**
 
+GitHub offers a convenient SSH key feature for accessing your repositories on the command line. Instead of using usernames and passwords every time you push to or pull from your repository, you can use your key.
 
 
 1. Create a new SSH: Type `ssh-keygen -t -b 4096 -C "<your email here>"` in your terminal, then press enter.
@@ -65,8 +66,47 @@ GitHub offers a convenient SSH key feature for accessing your repositories on th
 
 9. Choose a Title and paste the SSH key in the Box.
 
-10. You are all set up!
+10. You are all caught up!
 
+
+**B.** 
+**By adding Personal Access Tokens**
+
+You can also refer to this article: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
+
+1. Login to your account on github.com
+
+2. In the upper-right corner of any page, click your profile photo, then click Settings.
+
+3. In the left sidebar, click Developer settings.
+
+4. In the left sidebar, click Personal access tokens.
+
+5. Click Generate new token.
+
+6. Give your token a descriptive name.
+
+7. To give your token an expiration, select the Expiration drop-down menu, then click a default or use the calendar picker.
+
+8. Select the scopes, or permissions, you'd like to grant this token. To use your token to access repositories from the command line, select repo.
+
+9. Click Generate token.
+
+**REMEMBER**
+
+**(i) You'll have to use the token everytime while performing any github action that requires a token**
+
+Example:
+
+```
+$ git clone https://github.com/username/repo.git
+Username: your_username
+Password: your_token
+```
+
+**(ii) If you donot wish to enter your token everytime enter this line before using any command. After this you will have to enter the your token just one last time as it will cache your credential for the next use.**
+
+`git config --global credential.helper cache`
 
 
 # Github Commands
