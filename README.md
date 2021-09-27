@@ -88,7 +88,7 @@ GitHub offers a convenient SSH key feature for accessing your repositories on th
 
 
 **B.** 
-**By adding Personal Access Tokens**
+**By adding Personal Access Tokens (PAT)**
 
 You can also refer to this article: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
@@ -110,21 +110,21 @@ You can also refer to this article: https://docs.github.com/en/authentication/ke
 
 9. Click Generate token.
 
-**REMEMBER**
+-  **REMEMBER**
 
-**(i) You'll have to use the token everytime while performing any github action that requires a token**
+	**(i) By using PAT, you'll have to enter the token everytime you try to perform any operation. Here is an example of how you'll use it while cloning:**
 
-Example:
+	Example:
 
-```
-$ git clone https://github.com/username/repo.git
-Username: your_username
-Password: your_token
-```
-
-**(ii) If you donot wish to enter your token everytime enter this line before using any command. After this you will have to enter the your token just one last time as it will cache your credential for the next use.**
-
-`git config --global credential.helper cache`
+	```
+	$ git clone https://github.com/username/repo.git
+	Username: your_username
+	Password: your_token
+	```
+	
+	**(ii) If you donot wish to enter your PAT everytime, enter this line before using any command(like the one shown above in the example). After this you will have to enter the your PAT just one last time as it will cache your credential for the next use.**
+	
+	`git config --global credential.helper cache`
 
 
 # Github Commands
