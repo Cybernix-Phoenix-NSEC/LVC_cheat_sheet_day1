@@ -22,14 +22,17 @@ This repository contains the cheat sheet for the Day 1 session of Git-Learning V
 Just go to https://git-scm.com/download/win and the download will start automatically. Apply the steps described in the session to install.
 
 ## Install Git on Linux
-**For Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS)** 
-
-`sudo dnf install git-all`
-
-
 **For a Debian-based distribution, such as Ubuntu**
 
 `sudo apt install git-all`
+
+The above command will install all sub-packages including a GUI and tree visualizer. If you only want to include main components with minimal dependencies then you should rather use this command!.
+
+`sudo apt install git`
+
+**For Fedora (or any closely-related RPM-based distribution, such as RHEL or CentOS)** 
+
+`sudo dnf install git-all`
 
 
 *For other options, there are instructions for installing on several different Unix distributions on the Git website, at https://git-scm.com/download/linux.*
